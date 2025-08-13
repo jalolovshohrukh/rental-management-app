@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rental Management App</title>
+  <!-- Include Leaflet CSS for interactive maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">RentalApp</div>
+      <nav class="nav">
+        <button class="nav-btn" data-page="dashboard"></button>
+        <button class="nav-btn" data-page="properties"></button>
+        <button class="nav-btn" data-page="tenants"></button>
+        <button class="nav-btn" data-page="rent"></button>
+        <button class="nav-btn" data-page="expenses"></button>
+        <button class="nav-btn" data-page="profile"></button>
+      </nav>
+      <div class="controls">
+        <input type="text" id="searchInput" placeholder="" />
+        <select id="languageSelect">
+          <option value="en">English</option>
+          <option value="ru">Русский</option>
+          <option value="tj">Тоҷикӣ</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <main id="content"></main>
+
+  <!-- Modal for forms -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- Include Leaflet JS for interactive maps -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <!-- Include Chart.js for charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

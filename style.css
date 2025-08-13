@@ -1,0 +1,274 @@
+/* Basic styling for the rental management app */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Top navigation bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  color: #333;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #0074e4;
+}
+
+/* Navigation buttons */
+.nav {
+  display: flex;
+  gap: 8px;
+}
+
+/* Base style for nav buttons */
+.nav-btn {
+  background: none;
+  border: none;
+  color: #333;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.92em;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-btn.active {
+  background-color: #e6f0fb;
+  color: #0074e4;
+}
+
+/* Controls container (search + language) */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Search input styling */
+#searchInput {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 0.9em;
+  width: 220px;
+}
+
+/* Language selector styling */
+#languageSelect {
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 0.9em;
+  color: #333;
+}
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f1f1f1;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+  color: #555;
+}
+
+tr:nth-child(even) {
+  background-color: #fdfdfd;
+}
+
+button.action-btn {
+  margin-right: 5px;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #0074e4;
+  transition: background-color 0.2s;
+}
+
+button.action-btn:hover {
+  background-color: #005bb5;
+}
+
+button.delete-btn {
+  background-color: #e74c3c;
+}
+
+button.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  max-width: 520px;
+  width: 100%;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.2em;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-content form label {
+  font-size: 0.88em;
+  margin-bottom: 4px;
+}
+
+.modal-content form input,
+.modal-content form select,
+.modal-content form textarea {
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 0.9em;
+}
+
+.modal-content form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.modal-content form .form-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85em;
+}
+
+.modal-content form .form-actions button.save-btn {
+  background-color: #0074e4;
+  color: #fff;
+}
+
+.modal-content form .form-actions button.cancel-btn {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.modal-content form .form-actions button.save-btn:hover {
+  background-color: #005bb5;
+}
+
+.modal-content form .form-actions button.cancel-btn:hover {
+  background-color: #c0c0c0;
+}
+
+/* Search result dropdown */
+/* Search result dropdown */
+#searchResults {
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 200;
+}
+
+#searchResults div {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.85em;
+}
+
+#searchResults div:hover {
+  background-color: #f7f7f7;
+}
+
+/* Card component */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+/* Map container */
+.map-container {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Row highlighting for due payments */
+tr.overdue {
+  background-color: #ffe6e6;
+}
+tr.upcoming {
+  background-color: #fff5e6;
+}
